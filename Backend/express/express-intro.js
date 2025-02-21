@@ -33,7 +33,7 @@ app.get('/api',(req, res) => {
 });
 
 // myparams method 
-/// http://localhost:3000/api/Piyush/121
+// http://localhost:3000/api/Piyush/121
 app.get('/api/:name/:rollNo', (req,res) => {
     try {
         // const data = req.params;
@@ -43,5 +43,16 @@ app.get('/api/:name/:rollNo', (req,res) => {
         console.log(`Error: ${error.message}`)
     }
 })
+
+app.get()
+
+app.use(express.json());
+app.post('/users', (req, res) => {
+    // res.send("Welcome to Express!")
+    const data = req.body;
+    // console.log(data)
+    res.send(`My name is ${data.name}`);
+})
+
 
 app.listen(port, () => console.log(`Server is running on port ${port}`));
